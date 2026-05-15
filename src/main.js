@@ -7,20 +7,10 @@ const taskAbout = document.getElementById("task-about");
 cvBtn.addEventListener("click", function (e) {
   e.stopPropagation();
   if (this.classList.contains("selected")) {
-    window.open("/CV.pdf", "_blank");
+    window.open("/cv.pdf", "_blank");
     this.classList.remove("selected");
   } else {
     this.classList.add("selected");
-  }
-});
-
-cvBtn.addEventListener("dblclick", function () {
-  window.open("/CV.pdf", "_blank");
-});
-closeBtn.addEventListener("click", () => {
-  mainWindow.style.display = "none";
-  if (taskAbout) {
-    taskAbout.style.border = "2px solid var(--win-white)";
   }
 });
 
