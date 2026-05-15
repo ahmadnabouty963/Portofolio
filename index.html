@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'></svg>"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div class="desktop-icons">
+      <div class="icon">
+        <button id="cv-btn" class="pc-btn"></button>
+        <span class="text-icon">CV</span>
+      </div>
+      <div class="icon">
+        <div id="papierkorb" class="icon-box"></div>
+        <span class="text-icon">Papierkorb</span>
+      </div>
+    </div>
+
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">About Me</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize">_</button>
+          <button aria-label="Maximize">□</button>
+          <button aria-label="Close" class="close-btn">×</button>
+        </div>
+      </div>
+
+      <nav class="menu-bar">
+        <ul>
+          <li><u>D</u>atei</li>
+          <li><u>B</u>earbeiten</li>
+          <li><u>A</u>nsicht</li>
+          <li><u>H</u>ilfe</li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <header>
+          <h1>Willkommen auf meiner Homepage!</h1>
+          <p>Status: <span class="blink">ONLINE</span></p>
+          <marquee scrollamount="5">
+            10100010<strong class="greeting"> Welcome to my World! </strong
+            >010100110
+          </marquee>
+        </header>
+
+        <div class="inner-box">
+          <h2>📂 Über mich</h2>
+          <div class="editable-area">
+            Ahmad Nabouty <br /><br />
+            mein Name ist Ahmad Nabouty , am 10.06.1993 geboren . <br />
+            Ich bin Full-Stack Developer! <br />
+            hiermit nehme ich euch zu meiner Welt , wo alles noch gescmack hat.
+            <br />
+            klicke auf meine Projekte und let the Journey begin !
+            <br />
+            falls du meine lebenslauf sehen möchtest , darfst du gerne den CV
+            Folder öffnen.
+          </div>
+        </div>
+
+        <div class="inner-box">
+          <h2>🖼️ Meine Projekte</h2>
+          <div id="project-list" class="project-container">
+            <div class="project-item">
+              >
+              <a href="https://neo-hack.vercel.app/" target="blank">
+                <button id="btn-neo" class="projekt">
+                  <strong>NEO_HACK</strong>
+                </button>
+              </a>
+            </div>
+            <div class="project-item">
+              >
+              <a href="https://hack-simulator-five.vercel.app/" target="blank">
+                <button id="btn-terminal" class="projekt">
+                  <strong>HACK_TERMINAL</strong>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="inner-box">
+          <h2>📟 Kontakt</h2>
+          <a href="ahmad93na@gmail.com">
+            <button class="contact-btn">Nachricht senden</button>
+          </a>
+          <div class="visitor-counter">
+            Besucherzähler: <span class="counter-box">000742</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <p class="status-bar-field">Bereit</p>
+        <p class="status-bar-field">CPU: 133MHz</p>
+        <p class="status-bar-field">RAM: 16MB</p>
+      </div>
+    </div>
+
+    <div class="taskbar">
+      <button class="start-btn">Start</button>
+      <div class="taskbar-divider"></div>
+      <div class="active-task" id="task-about">About Me</div>
+      <div class="system-tray">22:31</div>
+    </div>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
