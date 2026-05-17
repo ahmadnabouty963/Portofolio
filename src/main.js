@@ -3,15 +3,14 @@ const mainWindow = document.querySelector(".window");
 const titleBar = document.querySelector(".title-bar");
 const closeBtn = document.querySelector(".close-btn");
 const taskAbout = document.getElementById("task-about");
+const minimizeBtn = document.querySelector(".minimize-btn");
 
-cvBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  if (this.classList.contains("selected")) {
-    window.open("/cv.pdf", "_blank");
-    this.classList.remove("selected");
-  } else {
-    this.classList.add("selected");
-  }
+closeBtn.addEventListener("click", () => {
+  mainWindow.style.display = "none";
+});
+
+minimizeBtn.addEventListener("click", () => {
+  mainWindow.style.display = "none";
 });
 
 if (taskAbout) {
@@ -28,15 +27,16 @@ if (taskAbout) {
 
 let isDragging = false;
 let offset = { x: 0, y: 0 };
+if (window.innerWidth > 768) {
+  titleBar.addEventListener("mousedown", (e) => {
+    isDragging = true;
 
-titleBar.addEventListener("mousedown", (e) => {
-  isDragging = true;
+    offset.x = e.clientX - mainWindow.offsetLeft;
+    offset.y = e.clientY - mainWindow.offsetTop;
 
-  offset.x = e.clientX - mainWindow.offsetLeft;
-  offset.y = e.clientY - mainWindow.offsetTop;
-
-  titleBar.style.cursor = "grabbing";
-});
+    titleBar.style.cursor = "grabbing";
+  });
+}
 
 document.addEventListener("mousemove", (e) => {
   if (!isDragging) return;

@@ -21,7 +21,7 @@ body {
   padding: 0;
   height: 100%;
   overflow: hidden;
-
+  touch-action: manipulation;
   width: 100%;
 }
 .desktop-icons {
@@ -54,9 +54,9 @@ body {
 }
 .window {
   background-color: var(--win-gray);
-  width: 80%;
-  max-width: 900px;
-  height: 85vh;
+  width: min(95vw, 900px);
+
+  height: min(85vh, 800px);
   border: 2px solid;
   border-color: var(--win-white) var(--win-shadow-dark) var(--win-shadow-dark)
     var(--win-white);
@@ -257,6 +257,7 @@ marquee {
 .project-item {
   width: auto;
   height: auto;
+  min-height: 44px;
 
   background: var(--win-gray);
   border: 2px solid;
@@ -310,4 +311,53 @@ marquee {
   padding: 3px 7px 1px 9px;
   border-color: var(--win-shadow-dark) var(--win-white) var(--win-white)
     var(--win-shadow-dark);
+}
+@media (max-width: 768px) {
+  .window {
+    width: 95vw;
+    height: 80vh;
+    top: 10px !important;
+    left: 10px !important;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 14px;
+  }
+
+  .taskbar {
+    height: 40px;
+  }
+
+  .start-btn,
+  .active-task,
+  .system-tray {
+    font-size: 10px;
+  }
+
+  .desktop-icons {
+    gap: 15px;
+  }
+
+  .icon {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .contact-btn,
+  .project-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  marquee {
+    font-size: 12px;
+  }
 }
